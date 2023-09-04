@@ -2,7 +2,7 @@ create database retail;
 Use retail;
 
 /* #1- Rename table name */
-alter table customers_data rename customers;
+alter table customers_data rename to customers;
 
 select * from customers;
 select * from orders;
