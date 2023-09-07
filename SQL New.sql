@@ -58,7 +58,7 @@ select * from customers where region in('Europe','Asia','Sub-saharan Africa');
 /* #13- customer name starts with R */
 select * from customers where cust_name like 'R%';
 
- /* #13- customers and order information of cust_id 1 /*
+ /* #13- customers and order information of cust_id 1 */
  select * from (select c.*,o.order_id,o.sales_channel,o.order_date,o.units_sold,o.unit_price from 
  customers as c join orders as o 
  on c.cust_id=o.cust_id) as T where cust_id=10;
@@ -75,8 +75,8 @@ select * from customers;
 
 alter table product rename column item_id to product_id;
 
-/* #15- order information of customer with cust_id 287 (max revenue customer) */
-select * from order_item where cust_id=287;
+/* #15- order information of customer with cust_id 953 (max revenue customer) */
+select * from order_item where cust_id=953;
 
 /* #16- information of customer with 2nd highest revenue */
 select * from (select * from
